@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
 import TaskInput from './components/TaskInput';
 import TaskList from './components/TaskList';
@@ -6,14 +6,23 @@ import TaskList from './components/TaskList';
 function App() {
   const [tasks, setTasks] = useState([]);
 
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    setTasks(storedTasks);
+  }, []);
+
   const addTask = (task) => {
     if (task) {
-      setTasks([...tasks, task]);
+      const newTasks = [...tasks, task];
+      setTasks(newTasks);
+      localStorage.setItem('tasks', JSON.stringify(newTasks)); // Güncelleme
     }
   };
 
   const deleteTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+    localStorage.setItem('tasks', JSON.stringify(newTasks)); // Güncelleme
   };
 
   return (
