@@ -1,0 +1,71 @@
+/* TaskInput formu için stil ayarları */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Görev girişi için metin kutusu */
+  form input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #BDBDBD;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  .color-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+  
+  .color-choice {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent; /* Seçilmemiş renk kutucukları için şeffaf kenarlık */
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .color-choice.selected {
+    border-color: #000000; /* Seçili renk kutucuğu için beyaz kenarlık */
+    transform: scale(1.2); /* Seçili renk kutucuğunu büyüt */
+  }  
+  
+  /* Görev ekleme butonu */
+  form button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  /* Dark mode styles */
+body.dark-mode input[type="text"],
+body.dark-mode select {
+  border-color: #f0f0f0;
+  background: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode button {
+  background-color: #474747;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
