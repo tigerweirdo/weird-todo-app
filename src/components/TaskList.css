@@ -1,111 +1,122 @@
 .task-list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .task-item {
-    background: #fff;
-    border: 1px solid transparent;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    height: 40px;
-  }
-  .task-item.editing {
-    transition: all 0.3s;
-  }
-  
-  .checkbox-container {
-    margin-right: 1rem;
-  }
-  
-  .task-editing-form {
-    display: flex;
-    flex-grow: 1;
-    gap: 10px;
-    align-items: center;
-    max-height: 40px; /* veya istediğiniz bir değer */
-    transition: all 0.3s;
-  }
-  
-  .task-edit-input {
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 2px solid #BDBDBD;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-  
-  .color-selector {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .color-choice {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid #ddd;
-  }
-  
-  .color-choice.selected {
-    border: 2px solid #000;
-  }
-  
-  .task-content {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .task-text {
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
 
-  
-  .delete-btn {
-    float: right;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
 
-  
-  /* Dark mode styles */
-  body.dark-mode .task-item {
-    background: #474747;
-    color: #f0f0f0;
-  }
-  
-  body.dark-mode .task-edit-input,
-  body.dark-mode select {
-    border-color: #f0f0f0;
-    background: #333;
-    color: #f0f0f0;
-  }
-  
-  body.dark-mode .delete-btn {
-    background-color: #474747;
-  }
-  
-  body.dark-mode .delete-btn:hover {
-    background-color: #555;
-  }
-  
-  .task-item:hover {
-    background-color: #f3f3f3;
-  }
-  
+.task-item, form input[type="text"] {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11); /* Hafif gölge */
+
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.8rem; /* Yükseklik eşitlemek için paddingi ayarlayın */
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 50px; /* Yükseklik eşitleme */
+  font-size: 1.1rem; /* Font boyutu eşitleme */
+}
+
+.task-item:hover {
+  background-color: #f7f7f7;
+}
+
+.task-item.editing {
+  border-color: #a0a0a0;
+}
+
+.task-editing-form {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+  align-items: center;
+  max-height: 40px; /* Düzenleme formu için maksimum yükseklik */
+  transition: all 0.3s;
+}
+
+.task-edit-input {
+  flex-grow: 1;
+  padding: 0.6rem; /* Düzenleme formu için padding */
+  border: 2px solid #BDBDBD;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+
+.task-item:hover {
+  background-color: #f7f7f7;
+}
+
+.task-item.editing {
+  border-color: #a0a0a0;
+}
+
+
+
+.color-selector {
+  display: flex;
+  gap: 5px;
+}
+
+.color-choice {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.color-choice.selected {
+  border: 3px solid #000;
+}
+
+.task-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-text {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.delete-btn:hover {
+  color: #ff6666;
+}
+
+/* Dark mode stilleri */
+body.dark-mode .task-item {
+  background: #474747;
+  color: #f0f0f0;
+}
+
+body.dark-mode .task-edit-input,
+body.dark-mode select {
+  border-color: #f0f0f0;
+  background: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode .delete-btn {
+  color: #f0f0f0;
+}
+
+body.dark-mode .delete-btn:hover {
+  color: #ff6666;
+}

@@ -9,12 +9,18 @@ form {
   
   /* Görev girişi için metin kutusu */
   form input[type="text"] {
-    width: 100%;
-    padding: 1rem;
+    padding: 0.8rem; /* Hafifçe azaltılmış dolgu */
     font-size: 1rem;
+    margin: 0; /* Margin'i sıfırlayın */
+
     border: 2px solid #BDBDBD;
-    border-radius: 8px;
-    transition: border-color 0.3s;
+    border-radius: 8px; /* Yuvarlak köşeler */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: all 0.3s; /* Renk ve sınır geçişleri için */
+    color: #333; /* Metin rengi */
+    width: 100%; /* Genişlik eşitleme */
+
   }
   
   .color-options {
@@ -36,7 +42,7 @@ form {
   
   .color-choice.selected {
     border-color: #000000; /* Seçili renk kutucuğu için beyaz kenarlık */
-    transform: scale(1.2); /* Seçili renk kutucuğunu büyüt */
+    transform: scale(1.); /* Seçili renk kutucuğunu büyüt */
   }  
   
   /* Görev ekleme butonu */

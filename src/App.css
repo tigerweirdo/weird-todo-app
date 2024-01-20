@@ -1,3 +1,6 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+} 
 body {
   background-color: #f0f0f0; /* Yumuşak bir arka plan rengi */
   color: #333; /* Okunabilirlik için koyu metin rengi */
@@ -26,7 +29,7 @@ body.dark-mode {
 
 .container {
   margin-top: 100px;
- width: 500px;
+ width: 600px;
 }
 
 h1 {
